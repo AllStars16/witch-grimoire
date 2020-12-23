@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.scss';
+import React from "react";
+import { Route } from "react-router-dom";
+import PublicHomepage from "./components/Homepage/public/index";
+import BookOfShadows from "./components/BookOfShadows/index";
+import Crystals from "./components/Crystals/index";
+import Herbs from "./components/Herbs/index";
+import Tarot from "./components/Tarot/index";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <React.Fragment>
+      <header>
+        Header
       </header>
-    </div>
+      <main>
+        <Route exact path="/" component={PublicHomepage} />
+        <Route exact path="/book-of-shadows" component={BookOfShadows} />
+        <Route exact path="/crystals" component={Crystals} />
+        <Route exact path="/herbs" component={Herbs} />
+        <Route exact path="/tarot" component={Tarot} />
+      </main>
+    </React.Fragment>
+
+
   );
 }
 
