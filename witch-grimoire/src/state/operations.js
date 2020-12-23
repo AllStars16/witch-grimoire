@@ -1,13 +1,31 @@
 import * as httpUtils from "../utils/httpUtils.js";
-import * as constants from "../utils/httpConstants.js"
+import * as httpConstants from "../utils/httpConstants"
+import * as actions from "./actions"
 
 const doGetCrystals = (dispatch) => {
-    let response = await httpUtils.GET(constants.CRYSTALS_ENDPOINT);
+    const l = httpConstants.CRYSTALS_ENDPOINT;
+    const response = fetch(httpConstants.CRYSTALS_ENDPOINT, {
+        method: "GET",
+        headers: {
+            "Accept": "application/json"
+        }
+    });
+    console.log("REsponse: " + response);
     if (response.ok) {
-        const json = response.json;
-        await dispatch(actions.setCrystals(json));
+        let respJson = response.json();
+
+        respJson.then(function (json) {
+            dispatch(actions.setCrystals(json));
+        });
+        /*  let response = await httpUtils.GET(constants.CRYSTALS_ENDPOINT);
+         if (response.ok) {
+             const json = response.json;
+             dispatch(actions.setCrystals(json));
+         } else {
+             dispatch(actions.setCrystals(new Error("Error in doGetCrystals")));
+         } */
     } else {
-        //dispatch(actions.setCrystals(new Error("Error in doGetCrystals")));
+        console.log("Error in doGetCrystals");
     }
 }
 

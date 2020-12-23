@@ -1,4 +1,4 @@
-const REST_API_BASE_URL = "localhost:3001";
+const REST_API_BASE_URL = "http://localhost:3001";
 const CRYSTALS_ENDPOINT = REST_API_BASE_URL + "/crystals";
 
 export {

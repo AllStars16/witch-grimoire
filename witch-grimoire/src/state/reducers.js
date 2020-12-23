@@ -4,7 +4,7 @@ import * as types from "./types";
 const crystalsReducer = (state = [], action) => {
     switch (action.type) {
         case types.SET_CRYSTALS:
-            return [...state, { ...action.crystals }];
+            return action.crystals;
         default:
             return state;
     }
