@@ -1,28 +1,29 @@
 import './App.scss';
 import React from "react";
-import { Route } from "react-router-dom";
-import PublicHomepage from "./components/Homepage/public/index";
-import BookOfShadows from "./components/BookOfShadows/index";
-import Crystals from "./components/Crystals/index";
-import Herbs from "./components/Herbs/index";
-import Tarot from "./components/Tarot/index";
+import { Route, Switch } from "react-router-dom";
+import Header from "./components/Header";
+import PublicHomepage from "./components/Homepage/public";
+import BookOfShadows from "./components/BookOfShadows";
+import Crystals from "./components/Crystals";
+import Herbs from "./components/Herbs";
+import Tarot from "./components/Tarot";
+import PageNotFound from "./components/PageNotFound.js"
 
 function App() {
   return (
     <React.Fragment>
-      <header>
-        Header
-      </header>
+      <Header />
       <main>
-        <Route exact path="/" component={PublicHomepage} />
-        <Route exact path="/book-of-shadows" component={BookOfShadows} />
-        <Route exact path="/crystals" component={Crystals} />
-        <Route exact path="/herbs" component={Herbs} />
-        <Route exact path="/tarot" component={Tarot} />
+        <Switch>
+          <Route exact path="/" component={PublicHomepage} />
+          <Route path="/book-of-shadows" component={BookOfShadows} />
+          <Route path="/crystals" component={Crystals} />
+          <Route path="/herbs" component={Herbs} />
+          <Route path="/tarot" component={Tarot} />
+          <Route component={PageNotFound} />
+        </Switch>
       </main>
     </React.Fragment>
-
-
   );
 }
 
