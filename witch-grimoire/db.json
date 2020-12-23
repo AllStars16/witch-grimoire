@@ -1,27 +1,36 @@
 {
-    "posts": [
-      {
-        "title": "common magics",
-        "category": "basic magic"
-      },
-      {
-        "title": "HtmlWebpackPlugin Multiples HTML files",
-        "category": "special magic"
-      }
-    ],
-    "users" : [
-        {
-            "uid": "eo12eodi9cik",
-            "firstName": "Eve",
-            "lastName": "Sullivan"
-        },
-        {
-            "uid": "f8888f212e1q",
-            "firstName": "Kei",
-            "lastName": "Nishikori"
-        }
-    ]
-  }
-
-
-  
+  "posts": [
+    {
+      "title": "common magics",
+      "category": "basic magic"
+    },
+    {
+      "title": "HtmlWebpackPlugin Multiples HTML files",
+      "category": "special magic"
+    }
+  ],
+  "users": [
+    {
+      "uid": "eo12eodi9cik",
+      "firstName": "Eve",
+      "lastName": "Sullivan"
+    },
+    {
+      "uid": "f8888f212e1q",
+      "firstName": "Kei",
+      "lastName": "Nishikori"
+    }
+  ],
+  "crystals": [
+    {
+      "name": "amethyst",
+      "subtypes": [],
+      "functions": []
+    },
+    {
+      "name": "agate",
+      "subtypes": [],
+      "functions": []
+    }
+  ]
+}
