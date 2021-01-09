@@ -24,13 +24,13 @@
   "crystals": [
     {
       "name": "amethyst",
-      "subtypes": [],
-      "functions": []
+      "description": "Some description",
+      "magickalProperties": []
     },
     {
       "name": "agate",
-      "subtypes": [],
-      "functions": []
+      "description": "Krisi e gotina",
+      "magickalProperties": []
     }
   ]
 }

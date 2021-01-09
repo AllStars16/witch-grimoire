@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import configureStore from "./state/configureStore.js";
 import { Provider} from "react-redux";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 
 const store = configureStore();
 

@@ -11,13 +11,17 @@ class Crystals extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getCrystals();
+        this.props.setCrystals();
     }
 
     render() {
+        console.log("Crystals" + JSON.stringify(this.props.getCrystals));
         return (
             <div>
-
+                {this.props.getCrystals && this.props.getCrystals.map((crystal, id) => {
+                   
+                return (<h1 key={id}>{crystal.name}</h1>) 
+                })}
             </div>
         );
     }
@@ -29,7 +33,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    getCrystals: async () => {
+    setCrystals: async () => {
         const response = await fetch(httpConstants.CRYSTALS_ENDPOINT, {
             method: "GET",
             headers: {
@@ -44,10 +48,6 @@ const mapDispatchToProps = dispatch => ({
                 dispatch(actions.setCrystals(json));
             });
         }
-
-
-
-
     }
 });
 
