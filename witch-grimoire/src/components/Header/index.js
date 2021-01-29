@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import cauldronStatic from '/Witch Grimoire/witch-grimoire/witch-grimoire/src/img/asdf.png'; 
-import cauldronActive from '/Witch Grimoire/witch-grimoire/witch-grimoire/src/img/cauldron.gif'; 
+//import cauldronStatic from '/Witch Grimoire/witch-grimoire/witch-grimoire/src/img/asdf.png'; 
+//import cauldronActive from '/Witch Grimoire/witch-grimoire/witch-grimoire/src/img/cauldron.gif'; 
 
 
 const Header = () => {

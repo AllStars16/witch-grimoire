@@ -3,7 +3,7 @@ import * as types from "./types";
 
 const crystalsReducer = (state = [], action) => {
     switch (action.type) {
-        case types.SET_CRYSTALS:
+        case types.LOAD_CRYSTALS:
             return action.crystals;
         default:
             return state;
@@ -13,7 +13,5 @@ const crystalsReducer = (state = [], action) => {
 const rootReducer = combineReducers({
     crystals: crystalsReducer
 });
-
-
 
 export default rootReducer;

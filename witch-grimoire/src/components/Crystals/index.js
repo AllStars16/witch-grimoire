@@ -1,8 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import * as operations from "../../state/operations";
-import * as actions from "../../state/actions";
-import * as httpConstants from "../../utils/httpConstants";
+import * as crystalActions from "../../state/crystalActions";
+import {bindActionCreators} from "redux";
 
 class Crystals extends React.Component {
     constructor(props) {
@@ -11,7 +10,9 @@ class Crystals extends React.Component {
     }
 
     componentDidMount() {
-        this.props.setCrystals();
+        this.props.crystalActions.loadCrystals().catch(error => {
+            alert("Loading crystals failed: " + error)
+        });
     }
 
     render() {
@@ -33,22 +34,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    setCrystals: async () => {
-        const response = await fetch(httpConstants.CRYSTALS_ENDPOINT, {
-            method: "GET",
-            headers: {
-                "Accept": "application/json"
-            }
-        });
-        console.log("REsponse: " + response);
-        if (response.ok) {
-            let respJson = response.json();
-
-            respJson.then(function (json) {
-                dispatch(actions.setCrystals(json));
-            });
-        }
-    }
+    crystalActions: bindActionCreators(crystalActions, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Crystals);

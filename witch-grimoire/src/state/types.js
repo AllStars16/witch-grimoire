@@ -1,5 +1,5 @@
-const SET_CRYSTALS = "crystals";
+const LOAD_CRYSTALS = "crystals";
 
 export {
-    SET_CRYSTALS
+    LOAD_CRYSTALS
 };
