@@ -1,7 +1,5 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-//import cauldronStatic from '/Witch Grimoire/witch-grimoire/witch-grimoire/src/img/asdf.png'; 
-//import cauldronActive from '/Witch Grimoire/witch-grimoire/witch-grimoire/src/img/cauldron.gif'; 
 
 
 const Header = () => {
@@ -12,13 +10,9 @@ const Header = () => {
         <header className="header">
             <div className="text-and-image">
             <h1 className="text-header">A witch's grimoire</h1>
-            <a href="https://www.google.com" title="ACU Project link">
-            <div className="img-acu"></div>
+            <a href="" title="Cauldron">
+            <div class="img-acu"></div>
             </a> 
-
-{/* 
-            <img src={cauldronStatic} alt="cauldron-static" className="cauldron-static"/>
-            <img src={cauldronActive} alt="cauldron-active" className="cauldron-active"/> */}
 
             </div>
 
@@ -29,6 +23,18 @@ const Header = () => {
             <NavLink to="/herbs" activeStyle={activeStyle} exact>Herbs</NavLink>{" | "}
             <NavLink to="/tarot" activeStyle={activeStyle} exact>Tarot</NavLink>
             </nav>
+            {/* <button type="button" className="btn btn-dark login"><NavLink to="/login" activeStyle={activeStyle} exact>LOGIN/Register</NavLink></button> */}
+            <div class="section one">
+   <div id="button">
+   <NavLink to="/login" activeStyle={activeStyle} exact>Login</NavLink>
+      <div class="ring one"></div>
+      <div class="ring two"></div>
+      <div class="ring three"></div>
+      <div class="ring four"></div>
+   </div>
+   
+</div>
+            
         </header>
 
     );
