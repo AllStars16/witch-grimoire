@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.6.0",
     "bootstrap": "^4.5.3",
     "immutable": "^4.0.0-rc.12",
+    "jsonwebtoken": "^8.5.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
@@ -23,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-server": "json-server --watch ./db.json --port 3001",
+    "start-server-auth": "node server.js --port 3002"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "json-server": "^0.16.3",
     "redux-devtools": "^3.7.0",
     "redux-immutable-state-invariant": "^2.1.0"
   }

@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Raiden",
+            "email": "raiden_1_@gmail.com",
+            "password": "!0coY&6%"
+        },
+        {
+            "id": "2",
+            "name": "Liu Kang",
+            "email": "liu.kang@gmail.com",
+            "password": "kU_7*a"
+        },
+        {
+            "id": "3",
+            "name": "Scorpio",
+            "email": "scorpi_69@gmail.com",
+            "password": "asdji8@jd82"
+        }
+    ]
+}

@@ -13,7 +13,7 @@ const Header = () => {
             <div className="text-and-image">
             <h1 className="text-header">A witch's grimoire</h1>
             <a href="https://www.google.com" title="ACU Project link">
-            <div class="img-acu"></div>
+            <div className="img-acu"></div>
             </a> 
 
 {/* 
